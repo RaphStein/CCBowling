@@ -1,0 +1,8 @@
+<div class="top-row">
+    <div>{{score.firstThrow === 10 ? "X" : score.firstThrow}}</div>
+    <div *ngIf="score.secondThrow">{{score.secondThrow + score.firstThrow === 10 ? "/" : score.secondThrow}}</div>
+    <div *ngIf="score.thirdThrow">{{score.thirdThrow}}</div>
+</div>
+<span class="sum-score">
+    {{score.value}}
+</span>

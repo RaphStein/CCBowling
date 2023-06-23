@@ -1,0 +1,39 @@
+:host {
+    border: 0.1rem black solid;
+    /* display: inline-block; */
+    box-sizing: border-box;
+    width: calc(100vw / 10);
+    max-width: 100px;
+    height: calc(100vw / 10);
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+:host > span {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.top-row {
+    display: flex;
+    justify-content: end;
+}
+
+.top-row > div {
+    border: 1px black solid;
+    border-top: none;
+    padding: 5px;
+}
+
+.top-row > div + div {
+    border-left: none;
+}
+
+.top-row > div:last-child {
+    border-right: none;
+}

@@ -1,0 +1,5 @@
+<div class="score-board">
+    <app-bowling-score *ngFor="let sc of scores" [score]="sc"></app-bowling-score>
+</div>
+<p>Total Score: <span>{{totalScore}}</span></p>
+<p><button class="new-game-btn" *ngIf="newGameAvailable" (click)="onStartNewGame()">New Game</button></p>

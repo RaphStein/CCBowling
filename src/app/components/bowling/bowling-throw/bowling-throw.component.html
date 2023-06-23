@@ -1,0 +1,17 @@
+<span id="throw-nb" #throwNb>{{currentThrowNb === 1 ? "First Throw" : currentThrowNb === 2 ? "Second Throw" : currentThrowNb === 3 ? "Bonus Throw" : isPlaying ? "New Frame ?" : "New Game ?"}}</span>
+<div class="pins" #pins>
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-1">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-2">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-3">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-4">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-5">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-6">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-7">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-8">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-9">
+    <img src="/assets/img/bowling-pin.svg" alt="Bowling pin" class="svg-pin" id="pin-10">
+</div>
+<span *ngIf="isPlaying" id="current-score">{{currentScore.firstThrow + (currentScore.secondThrow || 0)}}</span>
+<div class="actions" *ngIf="isPlaying">
+    <button id="throw-button" (click)="onThrowBall()">{{currentThrowNb ? "Throw" : "New"}}</button>
+</div>

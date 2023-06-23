@@ -1,0 +1,100 @@
+:host {
+    background-color: rgb(95, 67, 37);
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 4);
+    min-height: 500px;
+    padding: 2rem;
+    border-radius: 2rem;
+    gap: 10px;
+    align-items: center;
+}
+
+#current-score, #throw-nb {
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: monospace;
+}
+
+#throw-nb {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#current-score {
+    color: white;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.pins {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+img[class^="svg-pin"] {
+    max-height: 100px;
+}
+
+.pins > img {
+    position: absolute;
+}
+
+.pins > img:nth-child(n+5):nth-child(-n+7) {
+    top: 20%;
+}
+
+.pins > img:nth-child(n+8):nth-child(-n+9) {
+    top: 40%;
+}
+
+.pins > img:last-child {
+    top: 60%;
+}
+
+.pins > img:nth-child(2), .pins > img:nth-child(8) {
+    left: calc(100% / 4);
+}
+
+.pins > img:nth-child(3), .pins > img:nth-child(9) {
+    left: calc(2 * 100% / 4);
+}
+
+.pins > img:nth-child(4) {
+    left: calc(3 * 100% / 4);
+}
+
+.pins > img:nth-child(5) {
+    left: calc(100% / 8);
+}
+
+.pins > img:nth-child(6), .pins > img:last-child {
+    left: calc(3 * 100% / 8);
+}
+
+.pins > img:nth-child(7) {
+    left: calc(5 * 100% / 8);
+}
+
+.pin-down {
+    opacity: 0.2;
+}
+
+#throw-button {
+    background-color: black;
+    border: none;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#throw-button:hover {
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+}
